@@ -1,8 +1,8 @@
-module com.example.tocopy {
+module com.example.testa {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.tocopy to javafx.fxml;
-    exports com.example.tocopy;
+    opens com.example.testa to javafx.fxml;
+    exports com.example.testa;
 }
