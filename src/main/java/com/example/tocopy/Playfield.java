@@ -1,5 +1,16 @@
 package com.example.tocopy;
-
+/*--------------------------------------------------------
+ *      Hoehere Technische Bundeslehranstalt STEYR
+ *------------------------------------------------------*/
+/**
+ * @author  : Constantin Riedler
+ *            3AHITN
+ * @date    : 03 Februar 2022, 10:30
+ * File:   Playfield.java
+ *
+ * @details
+ *   Playfield Klasse. 2 Dimensonales Array als Spielfeld. Jeweilige Methoden um dieses zu befüllen und auf Muster zu prüfen.
+ */
 import java.util.Scanner;
 
 public class Playfield {
