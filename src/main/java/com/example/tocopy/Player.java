@@ -1,8 +1,25 @@
 package com.example.tocopy;
 
+/*--------------------------------------------------------
+ *      Hoehere Technische Bundeslehranstalt STEYR
+ *------------------------------------------------------*/
+/**
+ * @author  : Constantin Riedler
+ *            3AHITN
+ * @date    : 03 Februar 2022, 10:30
+ * File:   Playfield.java
+ *
+ * @details
+ *   Player Klasse, ein Player hat einen Namen und ein zugewiesenes Symbol. Diese können gesetzt und abgefragt werden durch jeweilige Methoden
+ */
 public class Player {
     String pname;
     char symbol;
+
+    public Player(String pname, char symbol) {
+        this.pname = pname;
+        this.symbol = symbol;
+    }
 
     /**
      * Gibt den namen von einem Player objekt zurück
