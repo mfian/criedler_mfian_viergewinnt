@@ -16,6 +16,11 @@ public class Player {
     String pname;
     char symbol;
 
+    /**
+     * Konstruktor um name und symbol zu setzen
+     * @param pname zusetzdender  name auf ein Player Objekt
+     * @param symbol zusetzndes symbol auf ein Player Objekt
+     */
     public Player(String pname, char symbol) {
         this.pname = pname;
         this.symbol = symbol;
