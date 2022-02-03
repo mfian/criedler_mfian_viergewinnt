@@ -16,13 +16,14 @@ public class Game {
             return p2;
         }
     }
-    void restart(){
+    int restart(){
         int k;
         System.out.println("Spiel erneut starten?");
         System.out.println("0---Nein");
         System.out.println("1---Ja");
         Scanner scan = new Scanner(System.in);
         k= scan.nextInt();
+        return k;
 
 
     }

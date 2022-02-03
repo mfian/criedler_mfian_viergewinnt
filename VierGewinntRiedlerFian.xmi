@@ -41,12 +41,13 @@
             <details xmi:id="_-vI-sGGREDqW9qiFz8pwgg00" key="uuid" value="_-vI-sGGREDqW9qiFz8pwgg"/>
           </eAnnotations>
         </xmi:Extension>
-        <ownedAttribute xmi:id="_BhfxkGGSEDqW9qiFz8pwgg" name="Feld[]" visibility="protected" type="_0faEcFwkEDqAt7eMn0AQ3Q">
+        <ownedAttribute xmi:id="_BhfxkGGSEDqW9qiFz8pwgg" name="Feld[][]" visibility="protected">
           <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
             <eAnnotations xmi:id="_BhfxkGGSEDqW9qiFz8pwgg0" source="genmymodel">
               <details xmi:id="_BhfxkGGSEDqW9qiFz8pwgg00" key="uuid" value="_BhfxkGGSEDqW9qiFz8pwgg"/>
             </eAnnotations>
           </xmi:Extension>
+          <type xsi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#//Integer"/>
         </ownedAttribute>
         <ownedOperation xmi:id="_77QFUGGSEDqW9qiFz8pwgg" name="checkwin" visibility="public" class="_-vI-sGGREDqW9qiFz8pwgg">
           <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
@@ -69,7 +70,7 @@
             </eAnnotations>
           </xmi:Extension>
         </ownedOperation>
-        <ownedOperation xmi:id="_MT_4kGGXEDqW9qiFz8pwgg" name="operation" visibility="public" class="_-vI-sGGREDqW9qiFz8pwgg">
+        <ownedOperation xmi:id="_MT_4kGGXEDqW9qiFz8pwgg" name="setplayfield" visibility="public" class="_-vI-sGGREDqW9qiFz8pwgg">
           <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
             <eAnnotations xmi:id="_MT_4kGGXEDqW9qiFz8pwgg0" source="genmymodel">
               <details xmi:id="_MT_4kGGXEDqW9qiFz8pwgg00" key="uuid" value="_MT_4kGGXEDqW9qiFz8pwgg"/>
@@ -83,29 +84,6 @@
             </eAnnotations>
           </xmi:Extension>
         </ownedOperation>
-      </packagedElement>
-      <packagedElement xsi:type="uml:Class" xmi:id="_0faEcFwkEDqAt7eMn0AQ3Q" name="Field">
-        <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-          <eAnnotations xmi:id="_0faEcFwkEDqAt7eMn0AQ3Q0" source="genmymodel">
-            <details xmi:id="_0faEcFwkEDqAt7eMn0AQ3Q00" key="uuid" value="_0faEcFwkEDqAt7eMn0AQ3Q"/>
-          </eAnnotations>
-        </xmi:Extension>
-        <ownedAttribute xmi:id="_Gwq1UFwlEDqAt7eMn0AQ3Q" name="Spalte" visibility="protected">
-          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-            <eAnnotations xmi:id="_Gwq1UFwlEDqAt7eMn0AQ3Q0" source="genmymodel">
-              <details xmi:id="_Gwq1UFwlEDqAt7eMn0AQ3Q00" key="uuid" value="_Gwq1UFwlEDqAt7eMn0AQ3Q"/>
-            </eAnnotations>
-          </xmi:Extension>
-          <type xsi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#//Integer"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:id="_KH86MFwlEDqAt7eMn0AQ3Q" name="Zeile" visibility="protected">
-          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-            <eAnnotations xmi:id="_KH86MFwlEDqAt7eMn0AQ3Q0" source="genmymodel">
-              <details xmi:id="_KH86MFwlEDqAt7eMn0AQ3Q00" key="uuid" value="_KH86MFwlEDqAt7eMn0AQ3Q"/>
-            </eAnnotations>
-          </xmi:Extension>
-          <type xsi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#//Integer"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="uml:Class" xmi:id="_YwM3YGGTEDqW9qiFz8pwgg" name="Player">
         <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
@@ -324,7 +302,7 @@
             </eAnnotations>
           </xmi:Extension>
         </interfaceRealization>
-        <ownedOperation xmi:id="_BcOTMGGWEDqW9qiFz8pwgg" name="PrintField" visibility="public" class="_8-MBoGGVEDqW9qiFz8pwgg">
+        <ownedOperation xmi:id="_BcOTMGGWEDqW9qiFz8pwgg" name="showField" visibility="public" class="_8-MBoGGVEDqW9qiFz8pwgg">
           <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
             <eAnnotations xmi:id="_BcOTMGGWEDqW9qiFz8pwgg0" source="genmymodel">
               <details xmi:id="_BcOTMGGWEDqW9qiFz8pwgg00" key="uuid" value="_BcOTMGGWEDqW9qiFz8pwgg"/>
