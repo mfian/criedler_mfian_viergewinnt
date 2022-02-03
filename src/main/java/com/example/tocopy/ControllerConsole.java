@@ -13,8 +13,8 @@ public class ControllerConsole {
      * Methode in der das eigentliche Spiel stattfindet
      */
     static void play(){
-        protected FieldViewConsole fvc=new FieldViewConsole();
-        protected PlayerviewConsole pvc=new PlayerviewConsole();
+        FieldViewConsole fvc=new FieldViewConsole();
+        PlayerviewConsole pvc=new PlayerviewConsole();
         boolean w = true;
         boolean y=true;
         String name;
