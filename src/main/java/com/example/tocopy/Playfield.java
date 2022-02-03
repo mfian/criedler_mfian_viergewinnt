@@ -30,6 +30,7 @@ public class Playfield {
 
     /**
      * Überprüft ob das Feld zur gänze voll ist und noch kein Spieler gewonnen hat
+     *
      * @return Ob das Spiel unentschieden ausgegangen ist oder nicht
      */
     boolean checkdraw() {
@@ -41,10 +42,12 @@ public class Playfield {
     /**
      * Fragt und lest die gewünschte Spalte ein, in der ein Stein geworfen werden soll.
      * Es wird geprüft ob die Spalte belegt ist, wenn nicht wird ein Stein gesetzt
+     *
      * @param currentp Übergibt den aktuellen Spieler, um zu wissen mit welchen Symbol setstone() aufgerufen werden soll
      * @return ob die Spalte belegt war oder nicht
      */
     boolean choosecol(Player currentp) {
+
         boolean rv = true;
         int col;
         System.out.println("In Welche Spalte möchten Sie einen Stein werfen?");
@@ -60,16 +63,17 @@ public class Playfield {
     }
 
     /**
-     *  * Lest dass array von unten ausgehend aus und überprüft in jeder Zeile,
-     *  ob es sich um ein Freies Feld handelt. Wenn ja wird ein Stein gesetzt.
-     * @param col In welche Spalte ein Stein fallen gelassen werden soll
+     * * Lest dass array von unten ausgehend aus und überprüft in jeder Zeile,
+     * ob es sich um ein Freies Feld handelt. Wenn ja wird ein Stein gesetzt.
+     *
+     * @param col      In welche Spalte ein Stein fallen gelassen werden soll
      * @param currentp Welches Symbol von welchen Spieler gesetzt werden sonn
      */
-     private void setStone(int col, Player currentp) {
+    private void setStone(int col, Player currentp) {
 
         for (int j = Field.length; 0 < j; j--) {
-            if (Field[j-1][col] == '#') {
-                Field[j-1][col] = currentp.getSymbol();
+            if (Field[j - 1][col] == '#') {
+                Field[j - 1][col] = currentp.getSymbol();
             }
 
         }
@@ -77,8 +81,9 @@ public class Playfield {
 
 
     /**
-     *     Überprüft ob in der obersten Zeile einer Spalte ein Stein ist, wenn ja wird zurückgegeben, das diese Spalte bereits voll ist.
-      * @param col Welche Spalte gecheckt werden soll
+     * Überprüft ob in der obersten Zeile einer Spalte ein Stein ist, wenn ja wird zurückgegeben, das diese Spalte bereits voll ist.
+     *
+     * @param col Welche Spalte gecheckt werden soll
      * @return Ob die Spalte belegt ist oder nicht.
      */
     private boolean checkiffull(int col) {
@@ -88,5 +93,8 @@ public class Playfield {
         }
         return rv;
 
+    }
+
+    public void checkwin(Playfield field) {
     }
 }

@@ -14,53 +14,23 @@ import java.util.Scanner;
  *   Game Klasse. Es können Spieler, Spielfelder und der aktuelle
  */
 public class Game {
-    Player[] players=new Player[2];
+    Player player1;
+    Player player2;
+
     Playfield pfield;
     Player currentplayer;
 
-
-    Game(Player[] players, Playfield pfield) {
-
-        boolean w = true;
-        boolean y=true;
-        String name;
-        char symbol;
-
-        System.out.println("Name des ersten Spielers:");
-        Scanner namescan = new Scanner(System.in);
-        name = namescan.next();
-
-        System.out.println("Symbol des ersten Spielers (Standard 'O', 'X'): ");
-        Scanner symbolscan = new Scanner(System.in);
-        symbol = symbolscan.next().charAt(0);
-
-        Player p1 = new Player(name, symbol);
-
-        do {
-
-            System.out.println("Name des zweiten Spielers:");
-            Scanner namescan1 = new Scanner(System.in);
-            if (namescan1.next() == name) {
-                System.out.println("Es können nicht 2 Spieler mit dem gleichen Namen existieren");
-                y=false;
-            }
-
-            name = namescan.next();
-        }while(!y);
-
-        do{
-            System.out.println("Symbol des zweiten Spielers (Standard 'O', 'X'): ");
-            Scanner symbolscan1 = new Scanner(System.in);
-            if (symbolscan1.next().charAt(0) == symbol) {
-                System.out.println("2 Spieler können nicht das gleiche Symbol benutzen");
-                w = false;
-            }
-
-                symbol = symbolscan.next().charAt(0);
-            }while (!w);
-        Player p2=new Player(name,symbol);
-
-           }
+    /**
+     * Konstrukter der Game Klasse
+     * @param player1 1.Spieler
+     * @param player2 2.Spieler
+     * @param pfield feld das gesetzt werden soll
+     */
+    Game(Player player1,Player player2, Playfield pfield) {
+        this.player1=player1;
+        this.player2=player2;
+        this.pfield=pfield;
+    }
 
 
 
