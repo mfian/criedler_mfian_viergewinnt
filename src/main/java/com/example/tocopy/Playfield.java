@@ -29,36 +29,27 @@ public class Playfield {
     }
 
     /**
-     * Überprüft ob das Feld zur gänze voll ist und noch kein Spieler gewonnen hat
-     *
-     * @return Ob das Spiel unentschieden ausgegangen ist oder nicht
-     */
-    boolean checkdraw() {
-        boolean rv = false;
-
-        return rv;
-    }
-
-    /**
      * Fragt und lest die gewünschte Spalte ein, in der ein Stein geworfen werden soll.
      * Es wird geprüft ob die Spalte belegt ist, wenn nicht wird ein Stein gesetzt
      *
      * @param currentp Übergibt den aktuellen Spieler, um zu wissen mit welchen Symbol setstone() aufgerufen werden soll
      * @return ob die Spalte belegt war oder nicht
      */
-    boolean choosecol(Player currentp) {
+    void choosecol(Player currentp) {
 
-        boolean rv = true;
+        boolean check = true;
         int col;
-        System.out.println("In Welche Spalte möchten Sie einen Stein werfen?");
-        Scanner scan = new Scanner(System.in);
-        col = scan.nextInt();
-        if (!checkiffull(col)) {
-            setStone(col, currentp);
-        } else {
-            rv = false;
-        }
-        return rv;
+        do {
+            System.out.println("In Welche Spalte möchten Sie einen Stein werfen?");
+            Scanner scan = new Scanner(System.in);
+            col = scan.nextInt();
+            if (!checkiffull(col)) {
+                setStone(col, currentp);
+            } else {
+                check = false;
+                System.out.println("Spalte bereits voll");
+            }
+        }while(!check);
 
     }
 
@@ -95,6 +86,20 @@ public class Playfield {
 
     }
 
-    public void checkwin(Playfield field) {
+    public boolean checkwin(Playfield field) {
+        boolean rv=false;
+        return rv;
+    }
+
+    /**
+     * Überprüft ob das Feld zur gänze voll ist und noch kein Spieler gewonnen hat
+     *
+     * @return Ob das Spiel unentschieden ausgegangen ist oder nicht
+     * @param pfield
+     */
+    boolean checkdraw(Playfield pfield) {
+        boolean rv = false;
+
+        return rv;
     }
 }

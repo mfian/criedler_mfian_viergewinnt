@@ -66,4 +66,19 @@ public class Game {
         return k;
     }
 
+    /**
+     * Gibt aus, dass das Spiel gewonnen wurde
+     * @param pname Der Name welcher Gewonnen hat
+     */
+    public void congratulate(String pname) {
+        System.out.println("Glückwunsch"+ pname + ", Sie haben das Spiel gewonnen");
+    }
+
+    /**
+     * Gibt aus dass das Spiel in Unentschieden geendet ist
+     */
+    public void printdraw() {
+        System.out.println("Das Spiel endetet in einem Unentschieden");
+
+    }
 }
