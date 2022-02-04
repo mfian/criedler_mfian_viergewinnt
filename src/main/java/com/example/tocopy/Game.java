@@ -11,7 +11,7 @@ import java.util.Scanner;
  * File:   Game.java
  *
  * @details
- *   Game Klasse. Es können Spieler, Spielfelder und der aktuelle
+ *   Game Klasse. Besitzt 2 Spieler ein Spielfeld, und speichert auch als Eigenschaft den Spieler der an der Reihe ist.
  */
 public class Game {
     Player player1;
@@ -80,5 +80,21 @@ public class Game {
     public void printdraw() {
         System.out.println("Das Spiel endetet in einem Unentschieden");
 
+    }
+
+    /**
+     * Überprüft den namen des akutellen Spielers mit einem der 2 Spieler, wenn dieser übereinstimmt wird
+     * der anderer Spieler, der nicht überprüft wurde zurückgegeben
+     * @param currentplayer Spieler der an der Reihe ist
+      * @param p1 einer der 2 aktuellen Spieler
+     * @param p2 einer der 2 akutellen Spieler
+     * @return den Spieler der davor nicht currentplayer war
+     */
+    public Player switchplayer(Player currentplayer, Player p1, Player p2) {
+        if(currentplayer.pname==p1.pname){
+            return p2;
+        } else {
+            return p1;
+        }
     }
 }

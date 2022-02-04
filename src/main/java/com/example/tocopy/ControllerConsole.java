@@ -2,6 +2,9 @@ package com.example.tocopy;
 
 import java.util.Scanner;
 
+/**
+ * Konsolenanwendung für das VierGewinnt Spiel
+ */
 public class ControllerConsole {
 
     public static void main(String[] args) {
@@ -16,7 +19,7 @@ public class ControllerConsole {
         FieldViewConsole fvc=new FieldViewConsole();
         PlayerviewConsole pvc=new PlayerviewConsole();
         boolean w;
-        boolean y=true;
+        boolean y;
         int restart=1;
         boolean gameover=false;
         String name;
@@ -36,7 +39,7 @@ while(restart==1) {
     Player p1 = new Player(name, symbol);
 
     do {
-
+        y=true;
         System.out.println("Name des zweiten Spielers:");
         Scanner namescan1 = new Scanner(System.in);
         if (namescan1.next() == name) {
@@ -60,9 +63,10 @@ while(restart==1) {
     } while (!w);
     Player p2 = new Player(name, symbol);
     Game g1 = new Game(p1, p2, pf);
-    while (gameover == false) {
+    g1.currentplayer=g1.getstarter(p1,p2);
+    while (!gameover) {
         fvc.showField(g1.pfield);
-        pvc.showcurrentPlayer(g1);
+        pvc.showcurrentPlayer(g1.currentplayer.pname);
         g1.pfield.choosecol(g1.currentplayer);
         if (g1.pfield.checkwin(g1.pfield)) {
             gameover = true;
@@ -70,11 +74,13 @@ while(restart==1) {
         } else if (g1.pfield.checkdraw(g1.pfield)) {
             gameover = true;
             g1.printdraw();
-
         }
-        restart= g1.restart();
+        g1.currentplayer=g1.switchplayer(g1.currentplayer, p1,p2);
+
 
     }
+    restart= g1.restart();
+
 }
 
     }

@@ -1,5 +1,13 @@
 package com.example.tocopy;
 
+
+/**
+ * Interface Playerview, kann eigenschaften eines Spielers beschreiben
+ */
 public interface Playerview {
-    void showcurrentPlayer(Game g);
+    /**
+     * GIbt einen String aus
+     * @param pname auszugebender Name
+     */
+    void showcurrentPlayer(String pname);
 }

@@ -88,6 +88,11 @@ public class Playfield {
 
     public boolean checkwin(Playfield field) {
         boolean rv=false;
+
+
+
+
+
         return rv;
     }
 
@@ -98,7 +103,17 @@ public class Playfield {
      * @param pfield
      */
     boolean checkdraw(Playfield pfield) {
-        boolean rv = false;
+        boolean rv = true;
+
+        for (int i = 0; i < pfield.Field.length; i++) {
+
+            for (int j = 0; j < pfield.Field[i].length; j++) {
+                if((pfield.Field[i][j]=='#')&&(!pfield.checkwin(pfield))){
+                    rv=false;
+                }
+            }
+        }
+
 
         return rv;
     }
