@@ -46,6 +46,7 @@ public class ControllerConsole {
         }while(!y);
 
         do{
+            w = true; // TODO Wittner: sonst kommt man nie aus der Schleife raus, wenn w auf false gesetzt wird!
             System.out.println("Symbol des zweiten Spielers (Standard 'O', 'X'): ");
             Scanner symbolscan1 = new Scanner(System.in);
             if (symbolscan1.next().charAt(0) == symbol) {
