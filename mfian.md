@@ -1,5 +1,8 @@
 
-|NR.| Datum  | Geänderte Kapitel   | Art der Änderung  | Autor  | Status |
-|---|---|---|---|---|---|
-| 1 | 28.01.2022 | Klassendiagramm | Erstellung | Moritz Fian | +
-|   |   |   |   |   |
+
+| NR. | Datum      | Geänderte Kapitel | Art der Änderung | Autor       | Status |
+|-----|------------|-------------------|------------------|-------------|---|
+| 1   | 28.01.2022 | Klassendiagramm   | Erstellung       | Moritz Fian | +
+| 2   | 03.02.2022 | Konsolenanwendung | Bearbeitung      | Moritz Fian | +
+|     |            |                   |                  |             |
+|     |            |                   |                  |             |
