@@ -13,6 +13,11 @@ import java.util.Scanner;
  * @details
  *   Game Klasse. Besitzt 2 Spieler ein Spielfeld, und speichert auch als Eigenschaft den Spieler der an der Reihe ist.
  */
+
+/**
+ * Game Klasse enthält alle Elemente die ein VierGewinnt Spiel benötigt
+ * Und Methoden um diese zu Verändern oder einzulesen
+ */
 public class Game {
     Player player1;
     Player player2;

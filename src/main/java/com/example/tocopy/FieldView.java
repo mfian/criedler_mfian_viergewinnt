@@ -1,7 +1,7 @@
 package com.example.tocopy;
 
 /**
- *
+ * Interface um Felder auszugeben
  */
 public interface FieldView {
     /**

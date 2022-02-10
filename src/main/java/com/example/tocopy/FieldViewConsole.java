@@ -1,5 +1,8 @@
 package com.example.tocopy;
 
+/**
+ * Konsolenausgabe eines Feldes
+ */
 public class FieldViewConsole implements FieldView{
     /**
      * Iteriert das Übergebene Feld durch und macht einen Zeilenumbruch am Ende jeder Reihe

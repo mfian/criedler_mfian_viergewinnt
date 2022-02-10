@@ -12,6 +12,10 @@ package com.example.tocopy;
  * @details
  *   Player Klasse, ein Player hat einen Namen und ein zugewiesenes Symbol. Diese können gesetzt und abgefragt werden durch jeweilige Methoden
  */
+
+/**
+ * Ein Objekt Spieler bestehend aus Name und zugewiesenen Symbol
+ */
 public class Player {
     String pname;
     char symbol;
