@@ -89,6 +89,13 @@ public class Playfield {
     public boolean checkwin(Playfield field) {
         boolean rv=false;
 
+        for (int i = 0; i < field.Field.length; i++) {
+
+            for (int j = 0; j < field.Field[i].length; j++) {
+                field.Field[i][j] = '#';
+            }
+        }
+
 
 
 

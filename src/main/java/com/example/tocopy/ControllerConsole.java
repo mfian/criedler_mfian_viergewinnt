@@ -1,5 +1,6 @@
 package com.example.tocopy;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -30,11 +31,11 @@ public class ControllerConsole {
 while(restart==1) {
     System.out.println("Name des ersten Spielers:");
     Scanner namescan = new Scanner(System.in);
-    name = namescan.next();
+    name = namescan.nextLine();
 
     System.out.println("Symbol des ersten Spielers (Standard 'O', 'X'): ");
     Scanner symbolscan = new Scanner(System.in);
-    symbol = symbolscan.next().charAt(0);
+    symbol = symbolscan.nextLine().charAt(0);
 
     Player p1 = new Player(name, symbol);
 
@@ -42,19 +43,18 @@ while(restart==1) {
         y=true;
         System.out.println("Name des zweiten Spielers:");
         Scanner namescan1 = new Scanner(System.in);
-        if (namescan1.next() == name) {
+        String WIttnerMagMich = namescan1.nextLine();
+        if (Objects.equals(WIttnerMagMich, name)) {
             System.out.println("Es können nicht 2 Spieler mit dem gleichen Namen existieren");
             y = false;
         }
-
-        name = namescan.next();
     } while (!y);
 
     do {
         w = true; // TODO Wittner: sonst kommt man nie aus der Schleife raus, wenn w auf false gesetzt wird!
         System.out.println("Symbol des zweiten Spielers (Standard 'O', 'X'): ");
         Scanner symbolscan1 = new Scanner(System.in);
-        if (symbolscan1.next().charAt(0) == symbol) {
+        if (symbolscan1.nextLine().charAt(0) == symbol) {
             System.out.println("2 Spieler können nicht das gleiche Symbol benutzen");
             w = false;
         }

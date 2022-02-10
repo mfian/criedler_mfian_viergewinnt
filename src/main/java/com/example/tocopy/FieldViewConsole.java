@@ -11,6 +11,7 @@ public class FieldViewConsole implements FieldView{
             System.out.println("\n");
             for (int j = 0; j < Field.Field[i].length; j++) {
                 System.out.print(Field.Field[i][j]);
+                System.out.print(" | ");
             }
         }
     }
