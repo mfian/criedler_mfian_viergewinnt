@@ -9,14 +9,10 @@ package com.example.tocopy;
  * File:   Playfield.java
  *
  * @details
- *
+ *   Playfield Klasse. 2 Dimensonales Array als Spielfeld. Jeweilige Methoden um dieses zu befüllen und auf Muster zu prüfen.
  */
 import java.util.Scanner;
 
-/**
- * Enthält ein 2Dimensionales Array das ein Spielfeld darstellt
- * Methoden um dieses zu befüllen und auf Muster zu prüfen
- */
 public class Playfield {
     protected char[][] Field = new char[6][7];
 
@@ -92,18 +88,6 @@ public class Playfield {
 
     public boolean checkwin(Playfield field) {
         boolean rv=false;
-
-        for (int i = 0; i < field.Field.length; i++) {
-
-            for (int j = 0; j < field.Field[i].length; j++) {
-                field.Field[i][j] = '#';
-            }
-        }
-
-
-
-
-
         return rv;
     }
 
@@ -111,20 +95,10 @@ public class Playfield {
      * Überprüft ob das Feld zur gänze voll ist und noch kein Spieler gewonnen hat
      *
      * @return Ob das Spiel unentschieden ausgegangen ist oder nicht
-     * @param pfield zu überprüfendes Feld
+     * @param pfield
      */
     boolean checkdraw(Playfield pfield) {
-        boolean rv = true;
-
-        for (int i = 0; i < pfield.Field.length; i++) {
-
-            for (int j = 0; j < pfield.Field[i].length; j++) {
-                if((pfield.Field[i][j]=='#')&&(!pfield.checkwin(pfield))){
-                    rv=false;
-                }
-            }
-        }
-
+        boolean rv = false;
 
         return rv;
     }
