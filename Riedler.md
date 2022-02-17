@@ -5,4 +5,5 @@
 |3   | 04.02  | Konsolenanwedung  | Änderung  | Constantin Riedler   | In bearbeitung, nahe zu fertigstellung
 |4   | 10.02  | GUI Anwendung  | Erstellung, HelloCOntroller mit Fixen Werten onClick methode  | Constantin Riedler   | In bearbung
 |5   | 11.02  | GUI Anwendung  | Erstellung,FXML  | Constantin Riedler   | In bearbeitung
+|6   | 17.02  | Konsolenandwendung | Problem in Controllter Konsole behoben | Constantin Riedler   | Feritgstellung
 
