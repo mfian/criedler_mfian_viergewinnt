@@ -32,10 +32,12 @@ public class Playfield {
      * Fragt und lest die gewünschte Spalte ein, in der ein Stein geworfen werden soll.
      * Es wird geprüft ob die Spalte belegt ist, wenn nicht wird ein Stein gesetzt
      *
+     *
+     * @param pfield
      * @param currentp Übergibt den aktuellen Spieler, um zu wissen mit welchen Symbol setstone() aufgerufen werden soll
      * @return ob die Spalte belegt war oder nicht
      */
-    void choosecol(Player currentp) {
+    void choosecol(Playfield pfield, Player currentp) {
 
         boolean check = true;
         int col;
@@ -65,6 +67,7 @@ public class Playfield {
         for (int j = Field.length; 0 < j; j--) {
             if (Field[j - 1][col] == '#') {
                 Field[j - 1][col] = currentp.getSymbol();
+                j=0;
             }
 
         }
@@ -86,7 +89,7 @@ public class Playfield {
 
     }
 
-    public boolean checkwin(Playfield field) {
+    public boolean checkwin(Playfield field, char symbol) {
         boolean rv=false;
         return rv;
     }
@@ -96,10 +99,18 @@ public class Playfield {
      *
      * @return Ob das Spiel unentschieden ausgegangen ist oder nicht
      * @param pfield
+     * @param symbol
      */
-    boolean checkdraw(Playfield pfield) {
+    boolean checkdraw(Playfield pfield, char symbol) {
         boolean rv = false;
+        for (int i = 0; i < pfield.Field.length; i++) {
 
+            for (int j = 0; j < pfield.Field[i].length; j++) {
+                if((pfield.Field[i][j] == '#')&&(!pfield.checkwin(pfield, symbol))){
+                    rv=false;
+                }
+            }
+        }
         return rv;
     }
 }

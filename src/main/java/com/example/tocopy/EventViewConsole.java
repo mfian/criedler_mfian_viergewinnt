@@ -3,7 +3,7 @@ package com.example.tocopy;
 /***
  * Klasse um erscheinende Events auszugeben
  */
-public class EventViewConsole implements EventView{
+public class EventViewConsole implements EventView {
     /**
      * Gibt Event aus
      */

@@ -3,7 +3,7 @@ package com.example.tocopy;
 /**
  * Ausgabe über Spieler in der GUI
  */
-public class PlayerViewGUI implements Playerview{
+public class PlayerViewGUI implements Playerview {
     /**
      * Gibt den aktuellen Spieler an
      * @param pname auszugebender Name
